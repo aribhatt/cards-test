@@ -1,0 +1,53 @@
+body{
+	background: url('../images/background.png');
+}
+.expand_up{
+	background: url('../images/arrow_icon.png')
+}
+.card{
+	border-radius: 5px;
+	
+}
+
+.card-container{
+	padding: 3px;
+}
+
+.icon-container{
+	position: absolute;
+	bottom: -5px;
+	right: 10px;
+}
+
+.icon img{
+	padding: 7px 10px 7px 10px;
+	background: white;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.row{
+	margin-right: 0px;
+	margin-left: 0px;
+}
+
+
+.headCont{
+	position: relative;
+}
+
+.headCont h2{
+	color: white;
+	font-weight: bold;
+	left:10px;
+	font-size: 1.8em;
+	
+}
+
+@media only screen and (orientation:landscape) {
+	.headCont h2{
+		font-size: 1.2em;
+	}
+	
+
+}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Adobe Now</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">		
+		<link href="css/cards.css" type="text/css" rel="stylesheet">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			.card{
+				background: white;
+			}
+
+			.firstRow{
+				padding: 5px;
+				border-top-left-radius: 5px;
+				border-top-right-radius: 5px;
+
+			}
+
+			.secondRow{
+				padding: 5px;
+				min-height: 80px;
+				margin-left: -15px;
+				margin-right: -15px; 
+				background: black;
+				border-bottom-left-radius: 5px;
+				border-bottom-right-radius: 5px;
+
+			}
+
+			.fig1{
+				margin: 10px;
+				background: orange;
+				width: 80%;
+				height:10px;
+				border-radius: 10px;
+			}
+			.fig2{
+				margin: 10px;
+				background: orange;
+				width: 50%;
+				height:10px;
+				border-radius: 10px;
+			}
+			
+
+			@media only screen and (orientation:landscape) {
+				.card-span{
+					width: 50%
+				}
+
+			}
+		</style>
+	</head>
+	<body>
+	<script type="text/javascript">
+		$('div.expand-up').click(function(){
+			
+		});
+	</script>
+	<div class="row">
+		<div class="card-span col-xs-12">
+
+<!-- CARD -->
+<div class="card-container container-fluid">
+
+    <div class="row headCont">
+	    <div class="col-xs-9 text-left">
+	      <h2>Visitor trend</h2>
+	    </div>
+	    <div class="col-xs-3 text-right icon-container">
+	      <div class="icon"><img src="images/email.png" alt="" class="email_img"></div>
+	    </div>   
+	 </div>
+
+    <div class="card container-fluid">
+
+	    <div class="firstRow row"> <!--  firstRow -->
+            <div class="row"> <!--daily_traffic  id="graph-header" --> 
+              <div class="col-xs-4">Today : 1b</div><!--  current_wk  -->
+              <div class="col-xs-4">Target : 2b</div>
+              <div class="col-xs-4">Projected : 3b</div>
+            </div>
+
+            <div class="row"><!--  revenue  -->
+              <div class="col-xs-12 "><div class="fig1"></div></div> <!-- id="revenueFigure6" -->
+              <div class="col-xs-12"><div class="fig2"></div></div> <!-- id="estimate1" --> 
+            </div>
+
+            <div class="row"><!--  id="graph-footer" -->
+              <div class="col-xs-12"> <!-- daily_traffic -->
+                <div class="col-xs-4"><!-- current_wk  -->
+                  <span class="current_Wk_text"></span> <span class="number"></span>
+	            </div>
+	            <div class="col-xs-4"></div><!-- wk_target  -->
+	          </div> 
+	        </div>
+          
+        </div>
+
+        <div class="secondRow row"> <!--  secondRow D3 Chart-->
+          <div class="col-xs-12">
+            <p class="area_header"><span class="second_header"></span></p>
+            <div id="area-chart"></div>
+            <div id="legends"></div>
+          </div>
+        </div>
+
+    </div>
+
+</div>
+
+					
+		</div>
+
+		<div class="card-span col-xs-12">
+
+<div class="card-container container-fluid">
+
+    <div class="row headCont">
+	    <div class="col-xs-9 text-left">
+	      <h2>Visitor trends</h2>
+	    </div>
+	    <div class="col-xs-3 text-right icon-container">
+	      <div class="icon"><img src="images/email.png" alt="" class="email_img"></div>
+	    </div>   
+	 </div>
+
+    <div class="card container-fluid">
+
+<div class="firstRow row"> <!--  firstRow -->
+            <div class="row"> <!--daily_traffic  id="graph-header" --> 
+              <div class="col-xs-4">Today : 1b</div><!--  current_wk  -->
+              <div class="col-xs-4">Target : 2b</div>
+              <div class="col-xs-4">Projected : 3b</div>
+            </div>
+
+            <div class="row"><!--  revenue  -->
+              <div class="col-xs-12 "><div class="fig1"></div></div> <!-- id="revenueFigure6" -->
+              <div class="col-xs-12"><div class="fig2"></div></div> <!-- id="estimate1" --> 
+            </div>
+
+            <div class="row"><!--  id="graph-footer" -->
+              <div class="col-xs-12"> <!-- daily_traffic -->
+                <div class="col-xs-4"><!-- current_wk  -->
+                  <span class="current_Wk_text"></span> <span class="number"></span>
+	            </div>
+	            <div class="col-xs-4"></div><!-- wk_target  -->
+	          </div> 
+	        </div>
+          
+        </div>
+
+        <div class="secondRow row"> <!--  secondRow D3 Chart-->
+          <div class="col-xs-12">
+            <p class="area_header"><span class="second_header"></span></p>
+            <div id="area-chart"></div>
+            <div id="legends"></div>
+          </div>
+        </div>
+    </div>
+
+</div>
+
+		</div>
+		
+	</div>
+		
+		
+	</body>
+</html>
