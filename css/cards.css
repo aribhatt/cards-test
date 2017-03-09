@@ -2,12 +2,50 @@ body{
 	background: url('../images/background.png');
 }
 
+.no-bg{
+	background: none;
+}
+
+.white-bg{
+	background: white;
+}
+
+.hide{
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
+.b-t-r{
+	border-top-right-radius: 5px;
+}
+.b-t-l{
+	border-top-left-radius: 5px;
+}
+.b-b-r{
+	border-bottom-right-radius: 5px;
+}
+.b-b-l{
+	border-bottom-left-radius: 5px;
+}
+
 .zero-pad{
 	padding: 0px;
 }
 .small-text{
 	font-size: 0.95em;
 	font-weight: bold;
+}
+
+.very-small-text{
+	font-size: 0.8em;
+
+}
+.legend-text{
+	font-size: 0.8em;
+	padding: 0px 5px 0px 5px;
 }
 .zero-mar{
 	margin: 0px;
@@ -88,6 +126,138 @@ body{
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
+/*Specific to second card*/
+.c2-fig1{
+	height: 158px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url('../images/cardBG.png');
+}
+.c2-fig2{
+	height: 158px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image:url('../images/cardBG2.png');
+}
+
+.c2-fig3{
+	height: 158px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-image: url('../images/cardBG3.png');
+}
+
+.c2-r1{
+	font-size: 1.5em;
+	text-align: center;
+	line-height: 50px;
+	color: white; 
+}
+
+.c2-r2{
+	font-size: 1.5em;
+	text-align: left;
+	line-height: 50px;
+	color: white; 
+	margin-top: 25%;
+	margin-left: 5%;
+}
+
+.c2-arrow-up{
+	background-image: url('../images/arrow-green.png');
+}
+
+.c2-arrow-down{
+	background-image: url('../images/arrow-red.png');
+}
+
+.c2-arrow {
+    background-image: url('../images/arrow-green.png');
+    background-repeat: no-repeat;
+    width: 20%;
+    min-height: 35px;
+    float: right;
+    margin-top: 15%;
+    margin-right: 2%;
+    background-size: 80%;
+}
+
+.expand_up {
+    background-image: url('../images/arrow_icon.png');
+    width: 22px;
+    min-height: 22px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%) translateY(-50%);
+	z-index: 9999;
+}
+/* Specific to card 3*/
+
+.channelP_search::before, .channelP_email::before, .channelP_display::before, .channelA_search::before, .channelA_email::before, .channelA_display::before {
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.channelA_email::before {
+    background-color: #21daa0;
+}
+.channelA_search::before {
+    background-color: #21daa0;
+}
+.channelA_display::before {
+    background-color: #21daa0;
+}
+
+.channelP_search::before, .channelP_email::before, .channelP_display::before {
+    background-color: #dadada;
+}
+
+.legend-text::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background-color: #69b6d5;
+    margin-right: 3px;
+	margin-left: 3px; 
+}
+
+.legend-email::before {
+    background-color: #21daa0;
+}
+
+.legend-display::before {
+    background-color: #0d6580;
+}
+
+.legend-search::before {
+    background-color: #d5406a;
+}
+.legend-other::before {
+    background-color: #D3885F;
+}
+
+.legend-prj::before {
+    background-color: #E8E8E8;
+}
+
+.card-footer{
+	padding: 15px 10px 10px 10px;
+}
+
 
 @media only screen and (orientation:landscape) {
 	.headCont h2{
