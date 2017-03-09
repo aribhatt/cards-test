@@ -1,22 +1,50 @@
 body{
 	background: url('../images/background.png');
 }
+
+.zero-pad{
+	padding: 0px;
+}
+.small-text{
+	font-size: 0.95em;
+	font-weight: bold;
+}
+.zero-mar{
+	margin: 0px;
+}
 .expand_up{
 	background: url('../images/arrow_icon.png')
 }
 .card{
 	border-radius: 5px;
-	
+}
+
+.txt-green{
+	color: green;
+}
+
+.txt-orange{
+	color: darkorange;
+}
+
+.area_header {
+    background: #464646;
+    display: none;
+    color: white;
+    font-size: .6em;
+    margin: 0px;
+    text-transform: uppercase;
+    text-indent: 4px;
 }
 
 .card-container{
-	padding: 3px;
+	padding: 5px 0px;
 }
 
 .icon-container{
 	position: absolute;
 	bottom: -5px;
-	right: 10px;
+	right: -5px;
 }
 
 .icon img{
@@ -24,6 +52,7 @@ body{
 	background: white;
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
+	vertical-align: middle;
 }
 
 .row{
@@ -37,16 +66,36 @@ body{
 }
 
 .headCont h2{
-	color: white;
-	font-weight: bold;
-	left:10px;
-	font-size: 1.8em;
-	
+	font: normal 1.5em "HelveticaNeue", Helvetica, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0 0 5px 1px;
+}
+
+.firstRow{
+	padding: 5px;
+	background: white;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+
+}
+
+.secondRow{
+	padding: 5px;
+	min-height: 80px;
+	margin-left: -15px;
+	margin-right: -15px; 
+	background: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 @media only screen and (orientation:landscape) {
 	.headCont h2{
 		font-size: 1.2em;
+	}
+
+	.two-card-span{
+		width: 50%
 	}
 	
 
