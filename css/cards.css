@@ -132,6 +132,22 @@ body {
     border-bottom-right-radius: 5px;
 }
 
+.c1-fig1 {
+    margin: 10px;
+    background: orange;
+    width: 80%;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.c1-fig2 {
+    margin: 10px;
+    background: orange;
+    width: 50%;
+    height: 10px;
+    border-radius: 10px;
+}
+
 
 /*Specific to second card*/
 
