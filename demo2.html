@@ -9,53 +9,19 @@
 		<link href="css/cards.css" type="text/css" rel="stylesheet">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<style type="text/css">
-			.card{
-				background: white;
-				min-height: 200px;
-			}
 
-						.fig1{
-				margin: 10px;
-				background: orange;
-				width: 80%;
-				height:10px;
-				border-radius: 10px;
-			}
-			.fig2{
-				margin: 10px;
-				background: orange;
-				width: 50%;
-				height:10px;
-				border-radius: 10px;
-			}
-
-			.col1{
-				height: 110px;
-				background: orange;
-			}
-			.col2{
-				height: 110px;
-				background: black;
-			}
-
-			.col3{
-				height: 110px;
-				background: red;
-			}
-
-			@media only screen and (orientation:landscape) {
-				.col-xs-12{
-					width: 50%
-				}
-
-			}
 		</style>
 	</head>
 	<body>
 	<script type="text/javascript">
+		$('.expand-up').mousedown(function(){
+			console.log('click...');
+			$('.first-row').toggle();
+			$('.second-row').toggle();
 		});
 	</script>
 	<div class="row">
+		<div class="two-card-span col-xs-12">
 
 		<div class="card-container container-fluid">
 
@@ -68,28 +34,60 @@
 		            </div>   
 		          </div>
 
+		          <div class="no-bg zero-pad card container-fluid">
 
+		            <div class="first_row row show zero-mar zero-pad">
 
+		              <div class="zero-pad col-xs-4 b-t-l b-b-l c2-fig1">
+		                <div class="row c2-r1"> 
+											<span></span>673.2K<span class="c2-arrow c2-arrow-up"></span>
 		                </div>
+		                <div class="row c2-r2">MH</div>                
 		              </div>
 
+		              <div class="zero-pad col-xs-4 c2-fig2 ">
+		                <div class="row c2-r1"> 
+											<span></span>123.2K<span class="c2-arrow c2-arrow-up"></span>
 		                </div>
+		                <div class="row c2-r2">AL</div>   
 		              </div>
 
+		              <div class="zero-pad col-xs-4 b-t-r b-b-r c2-fig3 ">
+		                <div class="row c2-r1"> 
+											<span></span>345.2K<span class="c2-arrow c2-arrow-down"></span>
 		                </div>
+		                <div class="row c2-r2">HN</div>   
+		              </div>
+
+		              <div class="expand_up"></div>
+		            </div>
+							 <div class="second_row row hide zero-mar zero-pad">
+
+		              <div class="zero-pad col-xs-4 b-t-l b-b-l c2-fig1">
+		                <div class="row c2-r1"> 
+											<span></span>100.2K<span class="c2-arrow c2-arrow-down"></span>
+		                </div>
+		                <div class="row c2-r2">MH</div>                
+		              </div>
+
+		              <div class="zero-pad col-xs-4 c2-fig2 ">
+		                <div class="row c2-r1"> 
+											<span></span>176.2K<span class="c2-arrow c2-arrow-down"></span>
+		                </div>
+		                <div class="row c2-r2">AL</div>   
+		              </div>
+
+		              <div class="zero-pad col-xs-4 b-t-r b-b-r c2-fig3 ">
+		                <div class="row c2-r1"> 
+											<span></span>565.2K<span class="c2-arrow c2-arrow-up"></span>
+		                </div>
+		                <div class="row c2-r2">HN</div>   
 		              </div>
 
 		              <div class="expand_up"></div>
 		            </div>
 
-		                </div>
-		              </div>
-		                </div>
-		              </div>
-		                </div>
-		              </div>
-		              <div class="expand_up"></div>
-		            </div>
+
 
 		           </div>
 
@@ -98,6 +96,7 @@
 					
 		</div>
 
+		<div class="two-card-span col-xs-12">
 
 		<div class="card-container container-fluid">
 
@@ -110,28 +109,60 @@
 		            </div>   
 		          </div>
 
+		          <div class="zero-pad card container-fluid">
 
+		            <div class="first_row row show zero-mar zero-pad">
 
+		              <div class="zero-pad col-xs-4 b-t-l b-b-l c2-fig1">
+		                <div class="row c2-r1"> 
+											<span></span>673.2K<span class="c2-arrow c2-arrow-up"></span>
 		                </div>
+		                <div class="row c2-r2">MH</div>                
 		              </div>
 
+		              <div class="zero-pad col-xs-4 c2-fig2 ">
+		                <div class="row c2-r1"> 
+											<span></span>123.2K<span class="c2-arrow c2-arrow-up"></span>
 		                </div>
+		                <div class="row c2-r2">AL</div>   
 		              </div>
 
+		              <div class="zero-pad col-xs-4 b-t-r b-b-r c2-fig3 ">
+		                <div class="row c2-r1"> 
+											<span></span>345.2K<span class="c2-arrow c2-arrow-down"></span>
 		                </div>
+		                <div class="row c2-r2">HN</div>   
+		              </div>
+
+		              <div class="expand_up"></div>
+		            </div>
+							 <div class="second_row row hide zero-mar zero-pad">
+
+		              <div class="zero-pad col-xs-4 b-t-l b-b-l c2-fig1">
+		                <div class="row c2-r1"> 
+											<span></span>100.2K<span class="c2-arrow c2-arrow-down"></span>
+		                </div>
+		                <div class="row c2-r2">MH</div>                
+		              </div>
+
+		              <div class="zero-pad col-xs-4 c2-fig2 ">
+		                <div class="row c2-r1"> 
+											<span></span>176.2K<span class="c2-arrow c2-arrow-down"></span>
+		                </div>
+		                <div class="row c2-r2">AL</div>   
+		              </div>
+
+		              <div class="zero-pad col-xs-4 b-t-r b-b-r c2-fig3 ">
+		                <div class="row c2-r1"> 
+											<span></span>565.2K<span class="c2-arrow c2-arrow-up"></span>
+		                </div>
+		                <div class="row c2-r2">HN</div>   
 		              </div>
 
 		              <div class="expand_up"></div>
 		            </div>
 
-		                </div>
-		              </div>
-		                </div>
-		              </div>
-		                </div>
-		              </div>
-		              <div class="expand_up"></div>
-		            </div>
+
 
 		           </div>
 

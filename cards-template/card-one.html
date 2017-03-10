@@ -1,3 +1,4 @@
+
 <div class="card-container container-fluid">
 
     <div class="row headCont">
@@ -11,37 +12,32 @@
 
     <div class="card container-fluid">
 
-	    <div class="row firstRow"> 
+				<div class="firstRow row"> <!--  firstRow -->
             <div class="row"> <!--daily_traffic  id="graph-header" --> 
-              <div class="zero-pad col-xs-4"></div><!--  current_wk  -->
-              <div class="zero-pad col-xs-4"></div>
-              <div class="zero-pad col-xs-4"></div>
+              <div class="small-text zero-pad col-xs-4">Today <span> </span></div><!--  current_wk  -->
+              <div class="small-text zero-pad col-xs-4">Target <span> </span></div>
+              <div class="small-text zero-pad col-xs-4">Projected <span> </span></div>
             </div>
 
-            <div class="row"><!--  revenue  -->
-              <div class="col-xs-12"></div> <!-- id="revenueFigure6" -->
-              <div class="col-xs-12"></div> <!-- id="estimate1" --> 
+            <div class="row revenueFig"><!--  revenue  -->
+              <div class="col-xs-12 "><div class="fig1"></div></div> <!-- id="revenueFigure6" -->
+              <div class="col-xs-12"><div class="fig2"></div></div> <!-- id="estimate1" --> 
             </div>
 
             <div class="row"><!--  id="graph-footer" -->
-              <div class="col-xs-12"> <!-- daily_traffic -->
-                <div class="col-xs-4"><!-- current_wk  -->
-                  <span class="current_Wk_text"></span> <span class="number"></span>
-	            </div>
-	            <div class="col-xs-4"></div><!-- wk_target  -->
-	          </div> 
-	        </div>
+							<div class="small-text zero-pad col-xs-4">Yesterday <span> </span></div><!--  current_wk  -->
+              <div class="small-text zero-pad col-xs-4">Target <span> </span></div>
+	          </div>
           
         </div>
 
-        <div class="row secondRow d3-chart"> <!--  secondRow D3 Chart-->
+        <div class="secondRow row"> <!--  secondRow D3 Chart-->
           <div class="col-xs-12">
             <p class="area_header"><span class="second_header"></span></p>
-            <div id="area-chart"></div>
-            <div id="legends"></div>
+            <div class="area-chart"></div>
+            <div class="legends"></div>
           </div>
         </div>
-
     </div>
 
 </div>
