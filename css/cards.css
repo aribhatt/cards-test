@@ -52,6 +52,11 @@ body {
     padding: 0px 5px 0px 5px;
 }
 
+.legend-text-none {
+    font-size: 0.75em;
+    padding: 0px 5px 0px 5px;
+}
+
 .zero-mar {
     margin: 0px;
 }
@@ -343,7 +348,11 @@ body {
 }
 
 .left-float {
-    float: left
+    float: left;
+}
+
+.right-float {
+    float: right;
 }
 
 .acSection .sent {
@@ -462,6 +471,68 @@ body {
     background-size: 100%;
     background-position: 0px;
     margin-top: 0px;
+}
+
+.date-display-card {
+    height: 30px;
+    widows: 100px;
+    border-radius: 30px;
+    color: darkslateblue;
+    background: white;
+    padding: 7.5px 5px 5px 5px;
+    margin: auto;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin: 40px 0px 40px 0px;
+}
+
+.white-body-text {
+    color: white;
+}
+
+.yday-card {
+    min-height: 65px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: #464646;
+}
+
+.today-card {
+    min-height: 65px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #0A3B66;
+}
+
+.detail-fig {
+    background: orange;
+    width: 70%;
+    height: 5px;
+    border-radius: 5px;
+    margin: 5px 5px 5px 15px;
+}
+
+.detail-header-pad {
+    padding-left: 15px;
+    padding-top: 5px;
+    margin: 0px 0px 0px;
+}
+
+.blue-txt-round-bg {
+    background: darkslateblue;
+    line-height: 15px;
+    width: 60px;
+    border-radius: 15px;
+    padding: 2px 3px 2px 3px;
+    margin: auto;
+}
+
+.detail-screen-graph img {
+    width: 100%;
+}
+
+.detail-screen-graph {
+    padding: 20px 0px 20px 0px;
 }
 
 @media only screen and (orientation:landscape) {
