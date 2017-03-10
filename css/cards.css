@@ -10,6 +10,10 @@ body {
     background: white;
 }
 
+.white-txt {
+    color: white;
+}
+
 .hide {
     display: none;
 }
@@ -325,9 +329,100 @@ body {
 }
 
 .BarGraphBig img {
-    max-width: 150px;
-    max-height: 150px;
-    margin: 10%;
+    width: 100%;
+}
+
+
+/*Card 4 specific */
+
+.triangle-30 {
+    height: 26px;
+}
+
+.tri-grey {
+    background-image: url('../images/toprightcut.png');
+    background-size: 100% 26px;
+    background-repeat: no-repeat;
+}
+
+.tri-green {
+    background-image: url('../images/botrightcut.png');
+    background-size: 100% 26px;
+    background-repeat: no-repeat;
+}
+
+.box-fill {
+    width: 100%;
+}
+
+.box-grey {
+    background: #A1A799;
+    height: 70px;
+    text-align: center;
+    padding-top: 28px;
+}
+
+.box-green {
+    background: #00770b;
+    height: 70px;
+    text-align: center;
+    padding-top: 28px;
+}
+
+.box-dgrey {
+    background: #71766F;
+    height: 44px;
+}
+
+.box-dgreen {
+    background: #224800;
+    height: 44px;
+}
+
+.c4-header {
+    height: 26px;
+}
+
+.c3-col-box {
+    padding-bottom: 26px;
+}
+
+.c3-col-box-grey {
+    background: #A1A799;
+    height: 44px;
+    margin-right: 1px;
+}
+
+.c3-col-box-green {
+    background: #00770b;
+    height: 44px;
+    margin-right: 1px;
+}
+
+.blank-row {
+    height: 15px;
+}
+
+.activate {
+    border: 2px solid #908f8f;
+    border-radius: 18px;
+    cursor: pointer;
+    padding: 5px 15px;
+    text-align: center;
+    font: bold 1em "HelveticaNeue", Helvetica, Arial, sans-serif;
+    color: #908f8f;
+    margin-top: -15px;
+    margin-bottom: 2px;
+    max-width: 120px;
+}
+
+.pause img {
+    margin-top: -15px;
+    margin-right: 5px;
+    margin-bottom: 2px;
+    float: right;
+    height: 32px;
+    width: 32px;
 }
 
 
