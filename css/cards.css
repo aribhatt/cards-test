@@ -295,6 +295,36 @@ body {
     padding: 15px 10px 10px 10px;
 }
 
+.c3-fig1 {
+    margin: 4px;
+    background: blue;
+    width: 80%;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.c3-fig2 {
+    margin: 4px;
+    background: red;
+    width: 50%;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.c3-fig3 {
+    margin: 4px;
+    background: green;
+    width: 90%;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.BarGraphBig img {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 10%;
+}
+
 
 /*Card-5 specific*/
 
