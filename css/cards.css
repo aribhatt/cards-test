@@ -292,6 +292,10 @@ body {
     position: relative;
 }
 
+.pad-ten {
+    padding: 10px;
+}
+
 .left-float {
     float: left
 }
