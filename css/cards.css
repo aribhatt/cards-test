@@ -413,7 +413,6 @@ body {
     color: #908f8f;
     margin-top: -15px;
     margin-bottom: 2px;
-    max-width: 120px;
 }
 
 .pause img {
@@ -568,6 +567,63 @@ body {
     margin-top: 0px;
 }
 
+.c5-rrow {
+    height: 75px;
+}
+
+.c5-rrow-top-col-lsec {
+    background: #424142;
+    margin-bottom: -15px;
+    min-height: 90px;
+    color: white;
+}
+
+.c5-rrow-top-col-rsec {
+    background: #8754e7;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    color: white;
+    height: 35px;
+}
+
+.c5-rrow-bot-col-lsec {
+    background: #ff2fda;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: white;
+    height: 35px;
+}
+
+.c5-rrow-bot-col-rsec {
+    background: #424142;
+    margin-top: -15px;
+    min-height: 90px;
+    color: white;
+}
+
+.c5-rrow-larrow {
+    background: url('../images/sentArrow.png');
+    width: 30px;
+    margin-bottom: -30px;
+    float: right;
+    margin-right: -30px;
+    height: 90px;
+    z-index: 99999;
+}
+
+.c5-rrow-rarrow {
+    background: url('../images/openArrow.png');
+    width: 30px;
+    margin-top: -30px;
+    float: left;
+    margin-left: -30px;
+    height: 90px;
+    z-index: 99999;
+}
+
+
+/*Display card */
+
 .date-display-card {
     height: 30px;
     widows: 100px;
@@ -631,6 +687,10 @@ body {
 }
 
 @media only screen and (orientation:landscape) {
+    .BarGraphBig img {
+        width: 50%;
+        margin-left: 25%;
+    }
     .headCont h2 {
         font-size: 1.2em;
     }
