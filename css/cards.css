@@ -691,6 +691,10 @@ body {
         width: 50%;
         margin-left: 25%;
     }
+    .two-card-span .BarGraphBig img {
+        width: 100%;
+        margin-left: 0%;
+    }
     .headCont h2 {
         font-size: 1.2em;
     }
