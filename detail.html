@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Details screen template</title>
+    <!-- Include jQuery Mobile stylesheets -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- Include the jQuery library -->
+
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- Include the jQuery Mobile library -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="css/cards.css" type="text/css" rel="stylesheet">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -27,13 +36,13 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-3 container-fluid text-left">
-                Home
+                <a href="#navigPanelAnalytics" class="ui-btn-right homeBtn hamberger" data-transition="slidefade" data-role="none" style=""></a>
             </div>
             <div class="date-display-card col-xs-6 container-fluid text-center">
                 March 07,2017
             </div>
             <div class="col-xs-3 container-fluid text-right">
-                Menu
+
             </div>
         </div>
 
@@ -54,7 +63,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="pad-ten col-xs-12 container-fluid text-center">
+            <div class="detail-total-header pad-ten col-xs-12 container-fluid text-center">
                 <p class="blue-txt-round-bg">Total</p>
             </div>
             <div class="zero-pad col-xs-12">
