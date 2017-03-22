@@ -674,7 +674,8 @@ body {
 }
 
 .blue-txt-round-bg {
-    background: darkslateblue;
+    border: 1px solid black;
+    background-color: #0A3B66;
     line-height: 15px;
     width: 60px;
     border-radius: 15px;
