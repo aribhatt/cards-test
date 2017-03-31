@@ -6,6 +6,8 @@ body {
     background: none;
 }
 
+.card-no-padding {}
+
 .white-bg {
     background: white;
 }
