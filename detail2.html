@@ -11,7 +11,6 @@
     <script src="js/bootstrap-slider.min.js"></script>
 
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Include the jQuery Mobile library -->
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -177,7 +176,7 @@
         }
         
         .icon_stp {
-            background-image: url(images/icons/at_ply.png);
+            background-image: url(images/icons/at_stp.png);
             width: 20px;
             height: 20px;
             display: inline-block;
@@ -262,10 +261,51 @@
         .glyphicon {
             margin-top: 10px;
         }
+        
+        .modal {
+            top: 245.5px;
+            color: black;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        
+        .modal-content {
+            border-radius: 20px;
+            border-color: black;
+            background-color: #dde1e2;
+        }
+        
+        .modal-body {
+            font-size: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-bottom: 1px solid #bbb;
+        }
+        
+        .modal-header {
+            border-bottom: 1px solid #bbb;
+        }
+        
+        .modal-footer {
+            text-align: center;
+            color: #1f7def;
+            font-family: HelveticaNeue-Thin, Tahoma, Arial, sans-serif;
+            font-size: 16px;
+        }
     </style>
 </head>
 
 <body class="white-body-text white-bg">
+    <script type="text/javascript">
+        $("#carouselGraph").swiperight(function() {
+            console.log('swiping...');
+            $("#carouselGraph").carousel('prev');
+        });
+        $("#carouselGraph").swipeleft(function() {
+            console.log('swiping...');
+            $("#carouselGraph").carousel('next');
+        });
+    </script>
     <!--<div class="jumbotron">
   <div class="container text-center">
     <h4>Online Store</h4>      
@@ -306,7 +346,7 @@
                 <p class="left-float">
                     <span class="icon_tm"></span>18 August 2016
                 </p>
-                <div class="right-float icon_stp"></div>
+                <div class="right-float icon_stp" data-toggle="modal" data-target="#stopDialog"></div>
             </div>
         </section>
 
@@ -531,7 +571,7 @@
                 </div>
                 <div class="row table-card-control">
                     <div class="table-card-control-icon tbl-icon-close"></div>
-                    <div class="table-card-control-icon tbl-icon-ok"></div>
+                    <div class="table-card-control-icon tbl-icon-ok" data-toggle="modal" data-target="#saveDialog"></div>
                 </div>
             </div>
         </section>
@@ -545,6 +585,48 @@
                 <a href="#About"><img src="images/taskBarSettings.png" /></a>
             </div>
         </div>
+
+        <div class="modal fade" id="saveDialog" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Traffic Throttle</h4>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Throttle parameters successfully saved!</p>
+                    </div>
+                    <div class="modal-footer text-center">
+                        OK
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal fade" id="stopDialog" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Test 1</h4>
+                    </div>
+                    <div class="modal-body text-center">
+                        <p>Are you sure to deactivate this Test?</p>
+                    </div>
+                    <div class="modal-footer text-center">
+                        <a class="col-xs-6 text-center" href="">NO</a>
+                        <a class="col-xs-6 text-center" href="">YES</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </body>
 
