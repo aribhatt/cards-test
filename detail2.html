@@ -28,8 +28,12 @@
             display: flex;
         }
         
-        .table-card,
         .slider-card {
+            background: white;
+            padding: 2px;
+        }
+        
+        .table-card {
             background: white;
             padding: 2px;
         }
@@ -39,7 +43,7 @@
             border-radius: 5px;
             margin: 5px;
             min-height: 150px;
-            padding: 5px 15px;
+            padding: 10px 15px;
         }
         
         .table-cell {
@@ -60,6 +64,8 @@
         .table-header {
             padding: 4px 0px;
             margin: 1px;
+            justify-content: center;
+            display: flex;
         }
         
         .slider-box {
@@ -136,6 +142,126 @@
             margin: 0px;
             padding: 0px;
         }
+        
+        .icon_up {
+            background-image: url(images/icons/at_up.png);
+            width: 13px;
+            height: 13px;
+            margin-right: 5px;
+            margin-top: 1px;
+            background-size: contain;
+            display: inline-block;
+            background-repeat: no-repeat;
+        }
+        
+        .icon_dwn {
+            background-image: url(images/icons/at_dn.png);
+            background-repeat: no-repeat;
+            width: 13px;
+            height: 13px;
+            margin-right: 5px;
+            margin-top: 1px;
+            background-size: contain;
+            display: inline-block;
+            background-repeat: no-repeat;
+        }
+        
+        .icon_tm {
+            background-image: url(images/icons/at_tm.png);
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+            margin-left: 5px;
+            display: inline-block;
+            background-size: contain;
+        }
+        
+        .icon_stp {
+            background-image: url(images/icons/at_ply.png);
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin: 0 3px;
+            background-size: contain;
+        }
+        
+        .table-card-control {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .table-card-control-icon {
+            margin: 10px 10px 15px 10px;
+            width: 20px;
+            height: 20px;
+        }
+        
+        .tbl-icon-close {
+            background-image: url(images/icons/at_cl.png);
+            display: inline-block;
+            background-size: contain;
+        }
+        
+        .tbl-icon-ok {
+            background-image: url(images/icons/at_tk.png);
+            display: inline-block;
+            background-size: contain;
+        }
+        
+        .icon-conv {
+            background-image: url(images/icons/at_tag.png);
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .icon-rpv {
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .icon-aov {
+            background-image: url(images/icons/at_soc.png);
+            width: 16px;
+            height: 16px;
+            display: inline-block;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .dummy-img-graph {
+            /*
+            background-image: url(images/graph.png);*/
+            background-size: contain;
+            background-repeat: no-repeat;
+            min-height: 400px;
+        }
+        
+        .caret-btn {
+            background-image: url(images/icons/at_dn_arw.png);
+            width: 14px;
+            height: 14px;
+            margin-top: 5px;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        
+        .carousel-control.right {
+            background-image: none;
+        }
+        
+        .carousel-control.left {
+            background-image: none;
+        }
+        
+        .glyphicon {
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -163,52 +289,40 @@
             <div class="zero-pad row">
                 <div class="pad-ten dropdown col-xs-12">
                     <button class="dropdown-btn col-xs-12 btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Ryan Loche Test
-  <span class="caret"></span></button>
+  <span class="caret-btn"></span></button>
                     <ul class="dropdown-menu">
                         <li><a href="#">Ryan Loche Test</a></li>
                         <li><a href="#">Checkout Flow Test</a></li>
-
                     </ul>
                 </div>
 
-
             </div>
-            <div class="top-info-stop">
+            <div class="top-info-stop col-xs-12">
+
                 <p class="left-float">
-                    <span></span>01 August 2016
+                    <span class="icon_tm"></span>01 August 2016
                 </p>
+
                 <p class="left-float">
-                    <span></span>18 August 2016
+                    <span class="icon_tm"></span>18 August 2016
                 </p>
-                <i class="right-float"></i>
+                <div class="right-float icon_stp"></div>
             </div>
         </section>
 
 
         <section class="zero-pad row">
-            <div class="">
 
-            </div>
-
-            <div id="" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="true">
+            <div id="carouselGraph" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="true">
                 <!-- Wrapper for slides -->
-                <a class="left carousel-control ui-link" href="#adobe_target" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control ui-link" href="#adobe_target" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+
                 <div class="carousel-inner" role="listbox">
-
-
-                    <div class="item active col-xs-12 zero-pad" id="">
+                    <div class="item">
                         <div class="item-header container-fluid text-center">
                             <h3>Average Order</h3>
                             <div class="green-card">
                                 <div class="green-card-txt">
-                                    <p>Running</p>
+                                    <p><span class="icon_up"></span>Running</p>
                                 </div>
                                 <div class="green-card-txt">
                                     <p>Lift</p>
@@ -219,7 +333,7 @@
                             </div>
                             <div class="red-card">
                                 <div class="red-card-txt">
-                                    <p>Running</p>
+                                    <p><span class="icon_dwn"></span>Running</p>
                                 </div>
                                 <div class="red-card-txt">
                                     <p>Lift</p>
@@ -230,11 +344,53 @@
                             </div>
 
                         </div>
-                        <div class="item-body blue-card flexy">
-                            <iframe src="" height="400" width="400"></iframe>
+                        <div class="item-body blue-card flexy dummy-img-graph">
+
                         </div>
 
                     </div>
+
+
+                    <div class="item active">
+                        <div class="item-header container-fluid text-center">
+                            <h3>Average Order</h3>
+                            <div class="green-card">
+                                <div class="green-card-txt">
+                                    <p><span class="icon_up"></span>Running</p>
+                                </div>
+                                <div class="green-card-txt">
+                                    <p>Lift</p>
+                                </div>
+                                <div class="green-card-txt">
+                                    <p>Confidence</p>
+                                </div>
+                            </div>
+                            <div class="red-card">
+                                <div class="red-card-txt">
+                                    <p><span class="icon_dwn"></span>Running</p>
+                                </div>
+                                <div class="red-card-txt">
+                                    <p>Lift</p>
+                                </div>
+                                <div class="red-card-txt">
+                                    <p>Confidence</p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="item-body blue-card flexy dummy-img-graph">
+
+                        </div>
+
+                    </div>
+                    <a class="left carousel-control ui-link" href="#adobe_target" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control ui-link" href="#adobe_target" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
                 <!-- /.carousel-inner -->
             </div>
@@ -243,14 +399,22 @@
 
 
 
-        <section class="zero-pad table-card">
+        <section class="zero-pad table-card flexy col-xs-12">
 
-            <div class="blue-card">
+            <div class="blue-card col-xs-12">
                 <div class="zero-pad col-xs-12 flexy">
-                    <div class="col-xs-3 table-header"></div>
-                    <div class="col-xs-3 table-header"></div>
-                    <div class="col-xs-3 table-header"></div>
-                    <div class="col-xs-3 table-header"></div>
+                    <div class="col-xs-3 table-header">
+
+                    </div>
+                    <div class="col-xs-3 table-header">
+                        <span class="icon-aov"></span>
+                    </div>
+                    <div class="col-xs-3 table-header">
+                        <span class="icon-conv"></span>
+                    </div>
+                    <div class="col-xs-3 table-header">
+                        <span class="icon-rpv">$</span>
+                    </div>
 
                 </div>
                 <div class="zero-pad col-xs-12 flexy">
@@ -258,109 +422,116 @@
                         <p class="table-cell-txt"></p>
                     </div>
                     <div class="col-xs-3 table-header">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">Conv Rate</p>
                     </div>
                     <div class="col-xs-3 table-header">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">AOV</p>
                     </div>
                     <div class="col-xs-3 table-header">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">RPV</p>
                     </div>
 
                 </div>
                 <div class="zero-pad col-xs-12 flexy">
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">Tennis</p>
                     </div>
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">1.06%</p>
                     </div>
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">$116.1</p>
                     </div>
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">$7.7</p>
                     </div>
 
                 </div>
                 <div class="zero-pad col-xs-12 flexy">
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">Running</p>
                     </div>
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">1.19%</p>
                     </div>
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
-                    </div>
-                    <div class="col-xs-3 table-cell"></div>
-
-                </div>
-                <div class="zero-pad col-xs-12 flexy">
-                    <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">$126.1</p>
                     </div>
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
-                    </div>
-                    <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
-                    </div>
-                    <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">$8.9</p>
                     </div>
 
                 </div>
                 <div class="zero-pad col-xs-12 flexy">
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">Football</p>
                     </div>
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">0.99%</p>
                     </div>
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">$94.6</p>
                     </div>
                     <div class="col-xs-3 table-cell">
-                        <p class="table-cell-txt"></p>
+                        <p class="table-cell-txt">$7.5</p>
                     </div>
 
                 </div>
+                <div class="zero-pad col-xs-12 flexy">
+                    <div class="col-xs-3 table-cell">
+                        <p class="table-cell-txt">Hockey</p>
+                    </div>
+                    <div class="col-xs-3 table-cell">
+                        <p class="table-cell-txt">0.87%</p>
+                    </div>
+                    <div class="col-xs-3 table-cell">
+                        <p class="table-cell-txt">$91.9</p>
+                    </div>
+                    <div class="col-xs-3 table-cell">
+                        <p class="table-cell-txt">$6.5</p>
+                    </div>
+
+                </div>
+
 
 
 
             </div>
         </section>
 
-        <section class="zero-pad slider-card">
-            <div class="blue-card">
+        <section class="zero-pad slider-card flexy">
+            <div class="blue-card col-xs-12">
                 <div class="container-fluid text-center col-xs-12">
                     <h4>Traffic Throttle</h4>
                 </div>
 
                 <div class="slider-box">
-                    <span class="slider-label"></span>
+                    <span class="slider-label">Tennis</span>
                     <div class="slider slider-horizontal" id=""></div>
                     <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"></div>
                     <span class="slider-val"></span>
                 </div>
                 <div class="slider-box">
-                    <span class="slider-label"></span>
+                    <span class="slider-label">Running</span>
                     <div class="slider slider-horizontal" id=""></div>
                     <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"></div>
                     <span class="slider-val"></span>
                 </div>
                 <div class="slider-box">
-                    <span class="slider-label"></span>
+                    <span class="slider-label">Football</span>
                     <div class="slider slider-horizontal" id=""></div>
                     <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"></div>
                     <span class="slider-val"></span>
                 </div>
                 <div class="slider-box">
-                    <span class="slider-label"></span>
+                    <span class="slider-label">Hockey</span>
                     <div class="slider slider-horizontal" id=""></div>
                     <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"></div>
                     <span class="slider-val"></span>
+                </div>
+                <div class="row table-card-control">
+                    <div class="table-card-control-icon tbl-icon-close"></div>
+                    <div class="table-card-control-icon tbl-icon-ok"></div>
                 </div>
             </div>
         </section>
