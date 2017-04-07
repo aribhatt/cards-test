@@ -445,9 +445,7 @@ function countCards(result) {
 
     //console.log(cards);
     $("#DMAHome .leftNavigation").attr('id', "navigPanelAnalytics"); //$("#DMAHome .hamberger").attr('href', "#leftNav");
-    $("#navigPanelAnalytics").on('scroll', function(e) {
-        e.stopPropagation();
-    });
+
     populateNavMenu("#DMAHome #navigPanelAnalytics", 'Home', -1, -1, true);
     createAboutPage();
 }
@@ -464,83 +462,93 @@ function createAboutPage() {
     });
 }
 
-function parseRegionDetailData(json) {
+function parseRegionDetailData(json, card_no) {
     var data1 = [],
         data2 = [];
 
     //console.log(json);
-    $.each(json, function(index, data) {
+    $.each(json[card_no], function(index, data) {
+        //console.log(index, data[0]);
 
-        $.each(data[0], function(i, d) {
-            //console.log(index, data[0]);
+        $.each(data, function(i, d) {
+
 
             if (typeof d === 'object') {
 
+                console.log(i, d);
+                var count = 0;
 
-                if (index === 0 || index === 1) {
-                    //console.log(i, d);
-                    var count = 0;
-                    $.each(d, function(j, k) {
+                $.each(d, function(j, k) {
+
+                    if (count == 1) {
+
+                        console.log(j, k);
+                        var type = 0;
+
+                        $.each(k, function(x, m) {
+                            //console.log(type, x, m);
 
 
-                        if (count == 1) {
                             var day = 0;
-                            //console.log(j, k);
-                            $.each(k, function(x, m) {
-                                //console.log(day, x, m);
-                                var item = {};
 
-                                $.each(m, function(y, n) {
-                                    //console.log(y, n);
-                                    var c = 0;
+                            $.each(m, function(y, n) {
+                                console.log(type, day, y, n);
 
-                                    for (var z in n) {
-                                        //console.log(c, z, n[z]);
+                                var c = 0;
+
+                                for (var z in n) {
+                                    var item = {};
+                                    //console.log(type, day, c, z, n[z]);
+                                    if (type == 0) {
+
                                         if (day == 0) {
                                             var item = {};
                                             item['name'] = z;
-                                            item['data'] = n[z];
-                                            item['today-data'] = n[z];
-                                            if (index == 0) {
-                                                data1.push(item);
-                                            } else if (index === 1) {
-                                                data1[c]['yes-data'] = n[z];
-                                            }
-                                        } else if (day == 1) {
-                                            if (index == 0) {
-                                                data1[c]['target'] = n[z];
-                                                data1[c]['today-target'] = n[z];
-                                            } else if (index === 1) {
-                                                data1[c]['yes-target'] = n[z];
-                                            }
-                                        } else if (day == 2) {
-                                            if (index == 0) {
-                                                data1[c]['projected'] = n[z];
-                                                data1[c]['today-proj'] = n[z];
-                                            } else if (index === 1) {
-                                                data1[c]['yes-proj'] = n[z];
-                                            }
+                                            //item['data'] = n[z];
+                                            item['yes-data'] = n[z];
+                                            data1.push(item);
+                                        } else if (day === 1) {
+                                            //console.log(data1[c]);
+                                            data1[c]['today-data'] = n[z];
+                                            data1[c]['data'] = n[z];
                                         }
+                                    } else if (type == 1) {
+                                        if (day == 0) {
 
-                                        c++;
+                                            data1[c]['yes-target'] = n[z];
+                                        } else if (day === 1) {
+                                            data1[c]['target'] = n[z];
+                                            data1[c]['today-target'] = n[z];
+                                        }
+                                    } else if (type == 2) {
+                                        if (day == 0) {
+
+                                            data1[c]['yes-proj'] = n[z];
+                                        } else if (day === 1) {
+                                            data1[c]['projected'] = n[z];
+                                            data1[c]['today-proj'] = n[z];
+                                        }
                                     }
 
-
-
-                                });
+                                    c++;
+                                }
 
                                 day++;
+
                             });
+                            type++;
 
-                        }
-                        count++;
+                        });
+
+                    }
+                    count++;
 
 
-                    });
+                });
+
+                //console.log(data1);
 
 
-
-                }
 
             }
 
@@ -550,7 +558,7 @@ function parseRegionDetailData(json) {
 
     });
 
-    //console.log(data1);
+
 
     return data1;
     //console.log(data2);
@@ -571,7 +579,7 @@ function parseRegionCards(json, Ddate, name, count, card_index, card_freq) {
 
         if (template && template.toLowerCase().indexOf('region') > -1) {
 
-            data = parseRegionDetailData(value.detail_trends);
+            data = parseRegionDetailData(value.detail_trends, card_freq);
 
             data1.push(data);
             data2.push(pname);
@@ -579,8 +587,8 @@ function parseRegionCards(json, Ddate, name, count, card_index, card_freq) {
             c++;
         }
     });
-    console.log(data1);
-    console.log(data2);
+    //console.log(data1);
+    //console.log(data2);
     renderRegionDetailData(data1, Ddate, name, count, card_index, card_freq, data2)
 }
 
@@ -592,12 +600,13 @@ function parseChannelCards(json, Ddate, name, count, card_index, card_freq) {
         var data = [];
 
         var template = value.template;
-        var page = value.name;
+
 
         if (template && template.toLowerCase().indexOf('channel') > -1) {
-            console.log(count);
+            var page = value.name;
+            console.log('Calling parse...', index, card_freq);
 
-            data = parseRegionDetailData(value.detail_trends);
+            data = parseRegionDetailData(value.detail_trends, card_freq);
 
 
             data1.push(data);
@@ -606,8 +615,8 @@ function parseChannelCards(json, Ddate, name, count, card_index, card_freq) {
             c++;
         }
     });
-    console.log(data1);
-    console.log(data2);
+    //console.log(data1);
+    //console.log(data2);
     renderRegionDetailData(data1, Ddate, name, count, card_index, card_freq, data2);
     $('#analytics' + count + '' + card_freq + ' .graph_txt').css('background-position', '70px');
 }
@@ -673,11 +682,11 @@ function home_card(result) {
                 $(".channel .headCont:eq(" + card_freq[2] + ") h2").html(value.name);
                 $('.pieBig:eq(' + card_freq[2] + ') .donut-chart:eq(0)').attr('id', 'donut' + card_freq[2]);
                 $('.channel:eq(' + card_freq[2] + ') .card-footer:eq(0)').attr('id', 'cardFoot' + card_freq[2]);
-                processDataForDonut('#donut' + card_freq[2], '#cardFoot' + count, value);
+                processDataForDonut('#donut' + card_freq[2], '#cardFoot' + card_freq[2], value);
                 processHomeChannelBulletData(value, card_freq[2]);
 
                 clicked_card(card_count, 2, card_freq[2]);
-                console.log(value.name, card_count);
+                //console.log(value.name, card_count);
                 parseChannelCards(arr, value.date_today, value.name, 2, card_count, card_freq[2]);
 
                 card2++;
@@ -1061,6 +1070,7 @@ function populateNavMenu(selector, name, template_type, card_index, isHome) {
 
     });
 
+
 }
 
 function detail_screen(detail, Ddate, name, count, card_index, card_freq) {
@@ -1177,7 +1187,7 @@ function detail_screen(detail, Ddate, name, count, card_index, card_freq) {
                         //   console.log($("#analytics" + "" + count + card_index + " #analytics_page" + count + '' + card_freq + '' + newINDEX + "  .detail-fig:eq(" + m + ")").index(), 'page');
                         $("#analytics" + "" + count + card_index + " #analytics_page" + count + '' + card_freq + '' + newINDEX + "  .detail-fig:eq(" + m + ")").attr('id', ele_id)
                         var trafficStackData1 = [{ "title": data4 + count + m, "ranges": [sum_p[m - 1]], "measures": [sum_a[m]], "markers": [sum_t[m]] }];
-                        console.log(trafficStackData1, 'trafficStackData1');
+                        //console.log(trafficStackData1, 'trafficStackData1');
                         renderHomeBullet("#" + ele_id, trafficStackData1, colorCodes, bulletHomeheight);
 
                         $("#analytics" + "" + count + card_index + " #analytics_page" + count + '' + card_freq + '' + newINDEX + "  .txt-orange:eq(" + m + ")").html(kFormatter(sum_a[m]));
@@ -1332,7 +1342,7 @@ function renderRegionDetailData(data, Ddate, name, count, card_index, card_freq,
 
 
         //if (index == 0) {
-        console.log(index, data[index]);
+        //console.log(index, data[index]);
         $(analytics_pg + ' h3.text-center:eq(0)').text(p_names[index]);
         populateRegionAnalyticsPage('#' + id, data[index], index, card_index);
 
@@ -1449,8 +1459,10 @@ function bulletRegioncard(data, id, text_id, isDetail, isYes = false) {
             states[2] = data['yes-target'];
         }
         str1 = '<p></p><span class="legend-text legend-actual" >' + kFormatter(states[0]) + '</span>';
-        str1 += '<span class="legend-text legend-target" >' + kFormatter(states[1]) + '</span>';
-        str1 += '<span class="legend-text legend-prj" >' + kFormatter(states[2]) + '</span></p>';
+        if (typeof states[1] != 'undefined')
+            str1 += '<span class="legend-text legend-target" >' + kFormatter(states[1]) + '</span>';
+        if (typeof states[2] != 'undefined')
+            str1 += '<span class="legend-text legend-prj" >' + kFormatter(states[2]) + '</span></p>';
         $('#' + text_id).html(str1);
 
     } else {
@@ -1859,7 +1871,7 @@ function processHomeChannelBulletData(json, counter) {
         //console.log(index, value);
         if (index === 0) {
 
-            $.each(value, function(j, coll) {
+            $.each(value[0], function(j, coll) {
                 //console.log(j, coll);
 
                 if (typeof coll === 'object') {
@@ -1871,7 +1883,7 @@ function processHomeChannelBulletData(json, counter) {
                         if (c == 0) {
                             $.each(d, function(i, a) {
                                 axis.push(a);
-                                console.log(i + '......' + a);
+                                //console.log(i + '......' + a);
                             });
                             c++;
                         } else if (c == 1) {
@@ -2104,7 +2116,7 @@ function renderChannelSummaryDonut(selector, dat, labelX, labelY) {
         .attr("class", "lines");
 
 
-    console.log(width, 'width', height, 'height');
+    //console.log(width, 'width', height, 'height');
     var pie = d3.layout.pie()
         //.padAngle(.02)
         .sort(null)
