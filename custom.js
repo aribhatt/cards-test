@@ -470,8 +470,9 @@ function parseRegionDetailData(json) {
 
     //console.log(json);
     $.each(json, function(index, data) {
-        //console.log(index, data);
-        $.each(data, function(i, d) {
+
+        $.each(data[0], function(i, d) {
+            //console.log(index, data[0]);
 
             if (typeof d === 'object') {
 
@@ -578,8 +579,8 @@ function parseRegionCards(json, Ddate, name, count, card_index, card_freq) {
             c++;
         }
     });
-    // console.log(data1);
-    // console.log(data2);
+    console.log(data1);
+    console.log(data2);
     renderRegionDetailData(data1, Ddate, name, count, card_index, card_freq, data2)
 }
 
@@ -1166,7 +1167,7 @@ function detail_screen(detail, Ddate, name, count, card_index, card_freq) {
                         }
 
                     }
-                    var newINDEX = index - 3;
+                    var newINDEX = index;
 
                     //console.log('str2', count, card_index, card_freq);
 
@@ -1870,7 +1871,7 @@ function processHomeChannelBulletData(json, counter) {
                         if (c == 0) {
                             $.each(d, function(i, a) {
                                 axis.push(a);
-                                //console.log(i + '......' + a);
+                                console.log(i + '......' + a);
                             });
                             c++;
                         } else if (c == 1) {
